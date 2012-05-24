@@ -1,0 +1,370 @@
+/* $Id: style.css,v 1.1.2.9 2009/05/22 08:46:11 jmburnz Exp $ */
+
+/**
+ * @file style.css
+ *
+ * Use this file to override the Genesis core modular styles 
+ * (such as the HTML elements in typography.css), module CSS 
+ * and other Drupal styles. Anything that doesn't fit logically
+ * into page.css, nodes.css, blocks.css or comments.css can go here.
+ */
+
+/**********************************************************
+ *                    Body
+ **********************************************************/
+body {
+  margin:0;
+  padding:0;
+}
+
+
+/**********************************************************
+ *                 HTML Elements
+ **********************************************************/
+
+h1 {}
+h2 {padding:2.25em 0 5px;}
+h3 {padding:0.25em 0 0;}
+h4 {}
+h5 {}
+h6 {}
+
+p {}
+
+strong {}
+em, dfn {}
+dfn {}
+
+sup, sub {}
+
+del {}
+ins {}
+
+blockquote {}
+cite {}
+q {}
+
+address {}
+
+ul {}
+ol {}
+li {}
+
+dl {}
+dd {}
+dt {}
+
+
+abbr {}
+acronym {}
+
+pre, code, tt {}
+p code {}
+samp {}
+kbd {}
+var {}
+
+table {width:100%;}
+tbody {}
+thead {}
+tfoot {}
+tr {}
+
+tr.odd,
+tr.info           { background-color:#eeeeF2; }
+tr.even           { background-color:#fafafa; }
+tr.odd td.active  { background-color:#d8d8e2; }
+tr.even td.active { background-color:#efefef; }
+
+th {}
+td {}
+
+/**********************************************************
+ *                 Typography
+ **********************************************************/
+
+#wrapper { /* Use #wrapper instead of body to avoid targetting admin-menu */
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  color:#212142;
+}
+
+#ribbon {
+  font-size: 16px;
+  color:#e3e3e3;
+}
+
+#breadcrumb, #breadcrumb a, #nav a, #nav label {
+  color:#000;
+  font-weight:normal;
+}
+
+ul.quicktabs_tabs li a 	      {color:#aaa;}
+ul.quicktabs_tabs li.active a {color:#212142;}
+
+#lightbox {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:14px;
+}
+
+ul.tabs a                  { color:blue;    }
+ul.tabs a:visited          { color:blue;    }
+
+thead a                    { color:blue;    }
+thead a:visited            { color:blue;    }
+
+ul.menu a	               { color:#aaa;    }
+ul.menu a.active,
+ul.menu li.active-trail a  {}
+
+/* Base Typography Overrides */
+input {
+  font-size:12px;
+}
+
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+
+a {
+  margin: 0; 
+  padding: 0;
+  text-decoration:none;
+  color: #5980ca;
+}
+
+#columns a,
+#user-login-form .item-list a {}
+
+#site-name a, #site-slogan {}
+
+a:link    {}
+a:visited {}
+a:hover   {color:#2f456e;}
+a:active  {}
+a.active  {}
+
+/* Set global a:active and a:focus styles. */
+a:active,
+a:focus {
+  color: #C00000;
+  border: 0;
+}
+#nav a:focus {}
+
+.center-wrapper .pane-views-panes a,
+td a  {
+ display:block; 
+}
+
+/* Drupal sets this to black. */
+li a.active {}
+
+
+/**********************************************************
+ *                 Accessibility Classes
+ **********************************************************/
+
+/* Hide content without positioning issues. */
+.invisible {
+  height: 0;
+  overflow: hidden;
+}
+
+/* Move content off screen where appropriate. */
+.offscreen {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Completely remove content for all users.
+   DO NOT use this for Skip links, display:none 
+   hides content from screen readers! */
+.remove {
+  display: none;
+}
+
+
+/**********************************************************
+ *                 Overrides
+ **********************************************************/
+
+/**
+ * Here you can add overrides of various modules and other
+ * hard coded styles.
+ */
+
+/* Genesis Overrides */
+.clear-block { display:block !important; }
+.not-logged-in .messages {display:none;}
+
+input.form-text,
+input.form-radio,
+input.form-checkbox,
+input.form-select,
+textarea {}
+
+input.form-text:focus,
+input.form-radio:focus,
+input.form-checkbox:focus,
+input.form-select:focus,
+textarea:focus {}
+
+/* Print Module Overrides*/
+.print_html, .print_mail, .print_pdf {
+  margin:0;
+}
+
+/* Views Module Overrides */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top:3px;
+}
+
+/* Panels Module Overrides */
+.center-wrapper {
+  clear:both;
+}
+/**********************************************************
+ *                 Views
+ **********************************************************/
+/* Products sidebar view */
+#block-views-all_active_products-block_1 {
+  margin:0;
+}
+
+#block-views-all_active_products-block_1 div.views-row {
+  padding-bottom:25px;
+}
+
+/* Customers view */
+.view-id-all_customers_grid tr {
+  height:100px;
+}
+
+.view-id-all_customers_grid td {
+  text-align:center;
+}
+
+/* Quicklinks view */
+.view-id-all_quick_links .views-row {
+  margin-bottom:1em;
+}
+
+/* Previously used when aligned on the bottom
+.front .view-id-all_customers_grid .view-header {
+  width:60%;
+  float:left;
+}
+*/
+
+.front .view-id-all_customers_grid .view-content {
+  padding:20px 0 50px;
+}
+
+.front .view-id-all_customers_grid .views-field-field-logo-fid {
+  text-align:center;
+  width:150px;
+}
+
+/* TV Align */
+.front #content {
+  background:url("../images/bg-TV.png") no-repeat transparent scroll 82% 33%;
+  padding-bottom:29px;
+}
+
+.panel-2col-stacked .center-wrapper .inside  {
+  padding-right:2.5em;
+}
+
+/* Team view */
+.view-id-all_users tr {  background-color:transparent;}
+.view-id-all_users thead th {border:none;}
+
+/* Products view */
+.view-id-all_active_products td a {
+  display: inline;
+}
+
+/* Services view */
+.view-id-all_active_services tbody .views-field-title {
+  font-size:125%;
+  width:10em;
+  padding:0 0 0 1.5em;
+}
+
+/* News view */
+.front .view-id-most_recent_story.view-display-id-panel_pane_2 .views-row {
+  margin-bottom:1em;
+}
+
+/**********************************************************
+ *                 Custom Styles
+ **********************************************************/
+
+/**
+ * Here you can add custom stles for your theme that do not fit
+ * into one if the modular stylesheets (such as the nodes, blocks,
+ * page and comments stylesheets).
+ */
+
+/* Label Display */
+.view label,
+.block-views label,
+#header-blocks label,
+#search label,
+#block-search-0 label {display:none;}
+.views-exposed-widget label,
+form label {display:block;}
+
+.views-exposed-widget label,
+.views-exposed-widget div {display:inline;}
+
+.views-exposed-widget label {padding-right:0.5em;}
+
+/* Menu Display */
+.block-menu h2,
+ h2.block-title {display:none;}
+ .sidebar h2.block-title {display:block;}
+ 
+ul.menu, ul.menu ul, ul.menu ul ul {
+  margin:0;
+  padding:0;
+}
+
+ul.menu li, ul.menu li li, ul.menu li li li {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+ul.menu a	      {}
+ul.menu a:link    {}
+ul.menu a:visited {}
+ul.menu a:hover   {}
+ul.menu a:active  {}
+ul.menu a.active  {}
+
+/* Quicktabs */
+ul.quicktabs_tabs {
+  margin:0;
+  padding:0 0 1.5em;
+}
+
+ul.quicktabs_tabs li {
+  padding-right:1.5em;
+
+}
+/**********************************************************
+ *                 Hacks
+ **********************************************************/
+
+/**
+ * Clean this section up. There's a better way.
+ */
+
+/* Menu Hacks */
+/* ul.menu ul.menu {display:none;} Fixed by disabling child menu items, but still having them exist. */
