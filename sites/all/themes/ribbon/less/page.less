@@ -365,27 +365,33 @@ dl.search-results dd .search-info {}
  **********************************************************/
 
 /**
- * #nav is the container div for Search box and Primary Links.
+ * .main-menu is the container div for Search box and Primary Links.
  */
 
-#nav {
+.main-menu {
   clear:none; /* Override layout.css */
   float:right;
   margin-top:10px;
+  .block,
+  .block-region,
+  form {
+      float:left;
+      clear:none;
+      margin: 0;
+  }
+  .block{
+    .block-edit{
+      top:-12px;
+      a {
+        padding: 1px 2px;
+      }
+    }
+  }
 }
 
-#nav .block, #nav .block-region, #nav form {
-  float:left;
-  clear:none;
-  margin: 0;
-}
 
-#nav .block-region {
-	
-}
 
-#nav div.block div.block-edit   {top:-12px;}  
-#nav div.block div.block-edit a {padding:1px 2px;}
+
 
 /**********************************************************
  *                    Primary Links
