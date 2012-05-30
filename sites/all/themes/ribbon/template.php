@@ -4,11 +4,11 @@
  * Implements hook_process_region().
  */
 function ribbon_process_region(&$vars) {
-  if (in_array($vars['elements']['#region'], array('header', 'content', 'menu', 'branding'))) {
+  if (in_array($vars['elements']['#region'], array('header_first', 'content', 'menu', 'branding'))) {
     $theme = alpha_get_theme();
 
     switch ($vars['elements']['#region']) {
-      case 'header':
+      case 'header_first':
         $vars['title_prefix'] = $theme->page['title_prefix'];
         $vars['title'] = $theme->page['title'];
         $vars['title_suffix'] = $theme->page['title_suffix'];
