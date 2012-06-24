@@ -1,12 +1,21 @@
 /* Target both sidebars with this low specifity selector. */
+
 .region-sidebar-first {
+  h2.block-title{
+    display: block;
+  }
   .region-inner {
-      background:url("../images/bg-sidebar-left.png") no-repeat scroll transparent;
+      background-image:url("../images/bg-sidebar-left.png");
+      background-repeat: no-repeat;
+      background-position: top right;
       margin:0 20px 0 0;
       padding:0;
   }  
 }
 .region-sidebar-second {
+ h2.block-title{
+    display: block;
+  }
   background:url("../images/bg-sidebar-right.png") no-repeat scroll transparent;
   .region-inner {
     padding:0 0 0 40px;
